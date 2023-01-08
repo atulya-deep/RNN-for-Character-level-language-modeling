@@ -1,1 +1,5 @@
 # RNN-for-Character-level-language-modeling
+The main task of the character-level language model is to predict the next character given all previous characters in a sequence of data, i.e. generates text character by character.
+![0_uU9Hd69sCK6hELOl](https://user-images.githubusercontent.com/83969166/211213175-fca53b26-5f8f-4187-8bd6-a6fd205d74cb.png)
+
+The objective is to make the green numbers as big as we can and the red numbers as small as we can in the probability distribution layer. The reason is that the true index should have the highest probability by making it as close as we can to 1. The way to do that is to measure the loss using cross-entropy and then compute the gradients of the loss w.r.t. all parameters to update them in the opposite of the gradient direction. Repeating the process over many times where each time we adjust the parameters based on the gradient direction –> model will be able to correctly predict next characters given all previous ones using all names in the training text
